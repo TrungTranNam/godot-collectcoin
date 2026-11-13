@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cgjnvi5w08j2h"]
+
+[ext_resource type="Texture2D" uid="uid://bgfnx0gcqld6c" path="res://assets/PNG/sprites/enemies/bee/bee-1.png" id="1_qe60h"]
+[ext_resource type="Script" uid="uid://d0xt8xp6v7d8c" path="res://scripts/bee.gd" id="1_yiyqc"]
+[ext_resource type="Texture2D" uid="uid://eplnev7jey5q" path="res://assets/PNG/sprites/enemies/bee/bee-2.png" id="2_yiyqc"]
+[ext_resource type="Texture2D" uid="uid://myqinq8lm3an" path="res://assets/PNG/sprites/enemies/bee/bee-3.png" id="3_ykkpv"]
+[ext_resource type="Texture2D" uid="uid://ciqehpbk5luw6" path="res://assets/PNG/sprites/enemies/bee/bee-4.png" id="4_011rt"]
+[ext_resource type="Texture2D" uid="uid://b6y7jxhe280gb" path="res://assets/PNG/sprites/enemies/bee/bee-5.png" id="5_ovfpg"]
+[ext_resource type="Texture2D" uid="uid://duo627hywpm3b" path="res://assets/PNG/sprites/enemies/bee/bee-6.png" id="6_28ix7"]
+[ext_resource type="Texture2D" uid="uid://cgcvd2kxc5ulm" path="res://assets/PNG/sprites/enemies/bee/bee-7.png" id="7_vq5cx"]
+[ext_resource type="Texture2D" uid="uid://wicm36lyr5n1" path="res://assets/PNG/sprites/enemies/bee/bee-8.png" id="8_gnnah"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_khevk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qe60h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yiyqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ykkpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_011rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ovfpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_28ix7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vq5cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gnnah")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j85gf"]
+radius = 8.0
+
+[node name="Bee" type="Area2D" unique_id=1494620736]
+script = ExtResource("1_yiyqc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1209121930]
+sprite_frames = SubResource("SpriteFrames_khevk")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723731340]
+shape = SubResource("CircleShape2D_j85gf")

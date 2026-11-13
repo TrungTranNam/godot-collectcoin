@@ -1,0 +1,7 @@
+# Cache của Godot, mỗi máy tự sinh lại
+.godot/
+
+# File export
+/build/
+*.exe
+*.pck
